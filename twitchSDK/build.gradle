@@ -12,9 +12,25 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+dependencies 
+{
+  implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+  implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+  implementation 'org.springframework.boot:spring-boot-starter-security'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+ // testImplementation 'org.springframework.security:spring-security-test'
+
+  implementation group: 'org.webjars', name: 'jquery', version: '3.3.1'
+  implementation group: 'org.webjars', name: 'bootstrap', version: '4.6.0'
+  implementation group: 'org.webjars', name: 'webjars-locator-core', version: '0.46'
+  implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.4.3'
+  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-client', version: '2.4.3'
+  
+	
+
 }
 
 test {
